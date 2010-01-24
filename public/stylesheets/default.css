@@ -1,0 +1,340 @@
+body {
+    font-size: 1.2em;
+    font-family: 'Lucida Sans',Verdana,Arial,Sans;
+    line-height: 1.2em;
+    color: #222;
+    background: #000;
+	min-width: 990px;
+}
+
+body, p, ul, ol, h1, dl, h2, h3, h4, h5, h6, form {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #c42e17;
+}
+
+img {
+    border: 0;
+}
+
+.accesible {
+    display: none !important;
+}
+
+/* -- Cabecera y pie -------------------------------------------------------- */
+
+#header {
+	background: #000 url(../images/fyp_logo.png) no-repeat 20px 20px;
+	padding-top: 20px;
+	border-bottom: 2px solid #888;
+}
+
+#footer {
+	background: #000;
+}
+
+#footer {
+	border-top: 2px solid #888;
+    text-align: center;
+    font-size: 90%;
+    padding: 20px 0px;
+}
+
+.home_page_link {
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 26px;
+	width: 162px;
+	height: 60px;
+}
+
+.home_page_link span {
+	display: none;
+}
+
+h1 {
+	color: #fff;
+	line-height: 120%;
+	padding-right: 20px;
+	padding-left: 250px;
+	text-align: right;
+	letter-spacing: -1px;
+	font-size: 250%;
+	font-family: 'Trebuchet MS', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+h1 em {
+	letter-spacing: -2px;
+	font-style: normal;
+	font-size: 130%;
+}
+
+h1 em.f {
+	color: #ffcc00;
+	letter-spacing: -6px;
+}
+
+h1 em.y {
+	color: #d40000;
+	letter-spacing: -8px;
+}
+
+h1 em.p {
+	color: #ff6600;
+}
+
+h1 em.url {
+	color: #fff;
+}
+
+h2 {
+	color: #FFF;
+	padding-right: 20px;
+	padding-left: 200px;
+	line-height: 120%;
+	color: #aaa;
+	letter-spacing: -1px;
+	text-align: right;
+	font-family: 'Trebuchet MS', Geneva, Arial, Helvetica, sans-serif;
+}
+
+h3,
+h4 {
+	color: #666;
+	margin-bottom: 20px;
+	letter-spacing: -1px;
+}
+
+#logged_user_area {
+	margin-top: 26px;
+	border-top: 2px solid #444;
+	padding: 10px 20px;
+	text-align: right;
+}
+
+#logged_user_area,
+#footer {
+	color: #aaa;
+}
+
+#logged_user_area a,
+#footer a {
+	color: #fff;
+    text-decoration: none;
+}
+
+#logged_user_area a:hover,
+#footer a:hover {
+    text-decoration: underline;
+	color: #e3351a;
+}
+
+/* -- Contenido ------------------------------------------------------------- */
+
+#content {
+	background: #FFF;
+	margin: 0 auto;
+	padding: 40px 60px;
+}
+
+label {
+	display: block;
+	color: #555;
+	padding-bottom: 4px;
+}
+
+.text_field input,
+.checkbox_field input {
+	border: 1px solid #aaa;
+	font-family: 'Lucida Sans',Verdana,Arial,Sans;
+	font-size: 100%;
+	padding: 2px 4px;
+}
+
+.text_field input {
+	width: 16em;
+}
+
+.text_field,
+.checkbox_field {
+	margin-bottom: 20px;
+}
+
+.buttons input,
+.fake_button {
+	border: 2px solid #888;
+	background: #ccc;
+	padding: 4px 12px;
+	font-size: 110%;
+	background: #000;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.fake_button:hover,
+.buttons input:hover {
+	background: #FFF;
+	color: #c42e17;
+}
+
+.buttons a {
+	padding-left: 10px;
+}
+
+#error,
+#errors {
+	width: 500px;
+	border: 2px solid #d45500;
+	padding: 16px 24px;
+	background-color: #000;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 90%;
+}
+
+#error {
+	margin: 0 auto 20px;
+}
+
+#error strong,
+#errors strong {
+	color: #d45500;
+}
+
+#notice {
+	width: 500px;
+	border: 2px solid #3C591A;
+	padding: 16px 24px;
+	background-color: #7AB635;
+	color: #fff;
+	font-size: 90%;
+	margin: 0 auto 20px;
+}
+
+#errors ul {
+	list-style: square;
+	padding-left: 20px;
+}
+
+#errors p {
+	margin-bottom: 0px;
+}
+
+.fieldWithErrors input {
+	border: 2px solid #d45500;
+}
+
+.checkbox_field .fieldWithErrors {
+	display: inline;
+}
+.checkbox_field {
+	color: #555;
+}
+p {
+	margin-bottom: 20px;
+}
+
+.something_missing {
+	padding-top: 10px;
+	text-align: center;
+	font-size: 120%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 550px;
+}
+
+#url {
+	margin-bottom: 40px;
+}
+
+#url form div {
+	display: inline;
+}
+#url form .text_field input {
+	margin-top: 1px;
+	border-width: 2px;
+	margin-bottom: 0 !important;
+	font-size: 135%;
+	padding-top: 5px;
+	padding-bottom: 6px;
+	line-height: 110%;
+}
+
+.current_fyp {
+	font-size: 200%;
+	text-align: center;
+}
+.current_fyp .fake_button {
+	font-size: 50%;
+}
+
+#tools dl {
+	padding-left: 250px;
+	background: #fff url(../images/fyp_express.png) left center no-repeat;
+}
+
+#fypized {
+	text-decoration: none;
+}
+
+#notice .flash_actions {
+	text-align: right;
+	text-transform: lowercase;
+}
+
+#notice .flash_actions a:hover {
+	color: #eee;
+}
+
+#login_area {
+	width: 40em;
+	border: 2px solid #aaa;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+html>body #login_area {
+	width: 34em;
+}
+
+.inline_form {
+	 margin-bottom: 4px;
+}
+
+.inline_form .text_field input {
+	width: 8em;
+}
+
+.inline_form label {
+	display: inline;
+}
+
+.what_is {
+	color: #666;
+	font-size: 86%;
+	margin: 30px 40px 20px;
+	text-align: justify;
+}
+
+.what_is  ul {
+	margin-left: 100px;
+	margin-right: 100px;
+	list-style-type: square;
+}
+
+.what_is em {
+	font-style:normal;
+	background: #FFC96B;
+	color: #444;
+	padding: 2px 4px;
+}

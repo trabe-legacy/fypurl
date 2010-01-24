@@ -1,0 +1,79 @@
+<h3><%= current_user.login %>'<%= 's' if current_user.login.chars.last != 's' %> admin page</h3>
+
+<div id="url">
+    <% if current_user.url.nil? %>
+        <p>
+            You have no fypped URL right now. If you want to fyp one, use this form:
+        </p>
+
+        <% if @error %>
+            <div id="errors" class="error">
+                <%= @error %>
+            </div>
+        <% end %>
+
+        <% form_tag :controller => 'user', :action => 'fyp' do -%>
+
+            <div class="field text_field">
+                <input type="text" name="url" value="<%= flash[:url] || 'http://' %>"/>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Fyp it!"/>
+            </div>
+        <% end %>
+    <% else %>
+        <p>
+            This is the URL you fypped <%= time_ago_in_words(current_user.url_time)%> ago
+        </p>
+        <div class="current_fyp">
+            <a id="fypized" href="<%= current_user.url %>"><%=  truncate(current_user.url,36) %></a>
+            <%= link_to "unfyp it!", {:controller => "user", :action => "unfyp"}, :class => 'fake_button' %>
+        </div>
+    <% end %>
+</div>
+
+<div id="change_password">
+    <h4>Change your password</h4>
+    <p>
+        You can change your password following this <%= link_to 'link',
+            {:controller => 'user', :action => 'change_password'},
+            {:title => 'Go to the change password form'} %>
+    </p>
+</div>
+
+<div id="tools">
+    <h4><span>FYP Express Tools</span></h4>
+    <p>
+        You can use these <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklets</a>
+        to quickly fyp and unfyp URLs while you surf the web:
+    </p>
+
+    <dl>
+        <dt>
+            <a title="FYP Express!"
+               href="javascript:function popup(){w=window.open('http://fypurl.com/fyp_express?fyp_action=fyp_express&amp;url='+encodeURIComponent(document.URL), 'fyp_express_window','width=710,height=440,left=75,top=20,resizable=yes,scrollbars=yes'); fyp_express_window.focus();}; popup();"
+               onclick="alert('To drag the link to your toolbar: click the link, hold the mouse button down, drag it to the browser toolbar and release the button.'); return false;">
+        	   FYP Express!
+    	    </a>
+        </dt>
+        <dd>
+            With this bookmarklet you'll be able to point your
+            <span class="fypurl">FYPurl</span> to the website you're visiting
+            at any moment. Just drag the bookmarklet to your browser toolbar.
+            Afterwards, if you visit a site and you need to share its URL,
+            click the bookmarklet and your <span class="fypurl">FYPurl</span>
+            will be automatically updated to point to the page you were browsing.
+        </dd>
+        <dt>
+            <a title="UnFYP Express"
+               href="javascript:function popup(){w=window.open('http://fypurl.com/unfyp_express?fyp_action=unfyp_express', 'fyp_express_window','width=710,height=440,left=75,top=20,resizable=yes,scrollbars=yes'); fyp_express_window.focus();}; popup();"
+               onclick="alert('To drag the link to your toolbar: click the link, hold the mouse button down, drag it to the browser toolbar and release the button.'); return false;">
+               UnFYP Express!
+            </a>
+         </dt>
+         <dd>
+            This bookmarklet allows you to easily clean up your <span class="fypurl">FYPurl</span>
+            and stop pointing to any URL.
+         </dd>
+    </dl>
+</div>

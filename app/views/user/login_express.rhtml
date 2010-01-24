@@ -1,0 +1,30 @@
+<h2>Well, my friend, we need some credentials before we can start fypping...</h2>
+
+<% if flash[:error] %>
+    <div id="errors">
+        <%= flash[:error] %>
+    </div>
+<% end %>
+
+<% form_tag :controller => 'user', :action => 'login_express' do -%>
+    <input type="hidden" name="fyp_action" value="<%= flash[:fyp_action]%>">
+
+    <input type="hidden" name="url" value="<%= flash[:url]%>">
+    <div class="text_field">
+        <label for="login">Login</label>
+        <% if flash[:login_user]%>
+            <%= text_field_tag 'login', flash[:login_user] %>
+        <% else %>
+            <%= text_field_tag 'login' %>
+        <% end %>
+    </div>
+
+    <div class="text_field">
+        <label for="password">Password</label>
+        <%= password_field_tag 'password' %>
+    </div>
+
+    <div class="buttons">
+        <%= submit_tag 'Log in express!' %>
+    </div>
+<% end -%>

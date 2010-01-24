@@ -1,0 +1,90 @@
+body {
+    font-size: 1.2em;
+    font-family: 'Lucida Sans',Verdana,Arial,Sans;
+    line-height: 1.2em;
+    color: #222;
+    background: #000;
+}
+
+body, p, ul, ol, h1, dl, h2, h3, h4, h5, h6, form {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #c42e17;
+}
+
+body {
+	background: #FFF url(../images/popup_bg.gif) repeat-y left;
+	padding: 20px 20px 20px 0px;
+}
+
+#content {
+	background: transparent url(../images/fyp_logo.png) no-repeat 5px 20px;
+	padding-left: 200px;
+	width: 420px
+}
+
+h1 {
+	display: none;
+}
+
+label {
+	display: block;
+	color: #555;
+	padding-bottom: 4px;
+}
+
+h2 {
+	font-size: 100%;
+	letter-spacing: -1px;
+	width: 400px;
+	margin-bottom: 10px;
+	color: #666;
+}
+
+.text_field input {
+	border: 1px solid #aaa;
+	font-family: 'Lucida Sans',Verdana,Arial,Sans;
+	font-size: 100%;
+	padding: 2px 4px;
+	margin-bottom: 10px;
+}
+
+.buttons input {
+	border: 2px solid #888;
+	background: #ccc;
+	padding: 4px 12px;
+	font-size: 110%;
+	background: #000;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.buttons input:hover {
+	background: #FFF;
+	color: #c42e17;
+}
+
+#errors {
+	width: 350px;
+	border: 2px solid #d45500;
+	padding: 10px 20px;
+	background-color: #000;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 90%;
+}
+
+#errors strong {
+	color: #d45500;
+}
+
+p {
+	margin-bottom: 30px;
+}

@@ -1,0 +1,34 @@
+= FypURL
+
+== Fyp.. what?
+
+FypURL stands for "For Your Pleasure, an URL" and is meant to be 
+"The easiest way to share one-minute-lasting URLs". If you want to learn more
+about FypURL visit the site http://fypurl.com.
+
+== About this repo
+
+This repo contains the FypURL source code just for educational purposes but you
+can do anything you want with it (licensed under MIT terms) except using the 
+"FypURL" name.
+
+Codebase is a little old and there are no tests. We will not provide support for
+this. We suggest you to use it as a good/bad example if you are learning Rails. 
+
+== Future changes
+
+* Upgrade to latest Rails version
+* Deployment at Heroku
+* Big refactoring
+* New look and feel
+* New REST API
+* Tests, tests, tests
+
+== Related projects
+
+* Chrome FypURL at http://github.com/davidbarral/chrome-fypurl
+
+== Contact
+
+Please mail bugs, suggestions and patches to 
+contact@davidbarral.com[mailto:contact@davidbarral.com]

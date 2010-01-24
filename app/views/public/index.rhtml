@@ -1,0 +1,99 @@
+<div class="what_is">
+    <p>
+        <span class="fypurl">FYPurl</span> is a <em>really simple application</em> with a
+        really simple purpose: <em>sharing URLs quickly and easily between people
+        in the same room</em>.
+    </p>
+</div>
+
+
+<% unless logged_in? %>
+    <div id="login_area">
+        <% form_tag :controller => 'user', :action => 'login' do -%>
+            <div class="inline_form">
+                <span class="text_field">
+                    <label for="login">Login</label>
+                    <% if flash[:login_user]%>
+                        <%= text_field_tag 'login', flash[:login_user] %>
+                    <% else %>
+                        <%= text_field_tag 'login' %>
+                    <% end %>
+                </span>
+
+                <span class="text_field">
+                    <label for="password">Password</label>
+                    <%= password_field_tag 'password' %>
+                </span>
+
+                <span class="buttons">
+                    <%= submit_tag 'Log in' %>
+                </span>
+            </div>
+            <%= link_to "Forgot your password?", :controller => "user",
+                :action => "forgotten_password" %>, don't worry.
+            Not an user?, just <%= link_to "sign up", :controller => "user",
+                :action => "signup" %>
+
+
+        <% end -%>
+    </div>
+<% end %>
+
+<div class="what_is">
+    <p>
+        With <span class="fypurl">FYPurl</span> you can point your own short
+        URL (www.fypurl.com/<i>your_login_name</i>) to any other URL to share
+        it with others easily.
+    </p>
+    <p>
+        <em>By using the <span class="fypexpress">FYPexpress</span> bookmarklets you'
+        ll be able to quickly point your own <span class="fypurl">FYPurl</span>
+        to any website you're browsing</em>. We call this <strong>fypping</strong>
+        an URL. And, of course, you can also remove your <strong>FYPurl</strong>.
+        We call this... <strong>unfypping</strong>, you got it right!
+    </p>
+    <p>
+        You may think this is not new, nor useful, and you may say you have
+        other options, such as:
+    </p>
+    <ul>
+        <li>
+            <strong>using Instant Messaging</strong>
+            <p>
+                Well, you'll have to copy the url, switch to the IM window,
+                start a conversation and paste the url. Easy, but...
+                maybe you don't want to (or even can) open your IM.
+            </p>
+        </li>
+        <li>
+            <strong>using online bookmarks</strong>
+            <p>
+                If you have the right plugin or bookmarklets, you can store the
+                url in your online bookmarks easily... but it won't be so easy to recall
+                it quickly!, and be realistic, maybe you don't give a damm about the link,
+                why store it?
+            </p>
+        </li>
+        <li>
+            <strong>using some url clipping site</strong>
+            <p>
+                This is the closest alternative, but still fails in its simplicity.
+                You'll get one url each time you clip another, so you'll still have to
+                paste the clipped url somewhere to share it.
+            <p>
+        </li>
+    </ul>
+
+    <p>
+        So, believe us, <em><span class="fypurl">FYPurl</span> is the easiest way
+        to share these annoying one minute lasting URLs</em>.
+    </p>
+    <p>
+        And remember, your <span class="fypurl">FYPurl</span> is public, so anyone can
+        see it... but we're all good guys, aren't we?
+    </p>
+    <p>
+    <%= link_to "Register now", :controller => "user", :action => "signup" %>
+    and start fypping URLs!
+    </p>
+</div>

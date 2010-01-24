@@ -1,0 +1,17 @@
+netbeans
+log/*.log
+db/*.sqlite3
+db/schema.rb
+tmp/**/*
+tmp/restart.txt
+doc/api
+doc/app
+doc/plugins
+.project
+.loadpath
+nbproject
+public/pictures/groups
+public/pictures/users
+public/pictures/resources
+db/fypurl_*
+db/schema.rb

@@ -1,0 +1,21 @@
+<h2>FYPpping!</h2>
+</p>
+
+<% if flash[:error].nil? %>
+    <p>
+        Congratulations, FYP successful
+    </p>
+    <p>
+        This window will be closed automatically in half a second.
+        If not, just use this <a href="#" onclick='window.close()'>link</a>
+    </p>
+    <script type="text/javascript">
+        setTimeout('window.close()',500);
+    </script>
+<% else %>
+<div id="errors">
+    <%= flash[:error]%>
+</div>
+
+<a href="#" onclick="window.close()">Close this window</a>
+<% end %>

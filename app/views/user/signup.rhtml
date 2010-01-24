@@ -1,0 +1,43 @@
+<h3>Sign up now! It's free</h3>
+
+<%= error_messages_for :user %>
+
+<% form_for :user do |f| -%>
+
+    <div class="field text_field">
+        <label for="login">Login</label>
+        <%= f.text_field :login %>
+    </div>
+
+    <div class="field text_field">
+        <label for="email">Email</label>
+        <%= f.text_field :email %>
+    </div>
+
+    <div class="field text_field">
+        <label for="password">Password</label>
+        <%= f.password_field :password %>
+    </div>
+
+    <div class="field text_field">
+        <label for="password_confirmation">Confirm Password</label>
+        <%= f.password_field :password_confirmation %>
+    </div>
+
+    <div class="field checkbox_field">
+        <label>
+            <%= check_box 'user', 'terms_of_use_acceptance'%>
+                I have read and accept the
+                <%= link_to 'terms of use',
+                    :controller => 'public',
+                    :action => 'legal_info',
+                    :anchor => 'terms_of_use' %>
+        </label>
+    </div>
+
+    <div class="buttons">
+        <%= submit_tag 'Sign up' %>
+        <%= link_to 'Cancel and go to the home page', :controller => 'public', :action => 'index'%>
+    </div>
+<% end -%>
+

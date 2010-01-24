@@ -1,0 +1,14 @@
+development:
+  adapter: sqlite3
+  dbfile: db/fypurl_devel
+
+test:
+  adapter: sqlite3
+  dbfile: db/fypurl_test
+
+production:
+  adapter: mysql
+  database: fypurl
+  username: fypurl
+  password: fypurl
+  host: localhost
